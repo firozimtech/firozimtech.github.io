@@ -1,0 +1,9 @@
+.justify {
+  text-align: justify;
+}
+blockquote {
+  border: none;
+  padding: 0;
+  margin: 10;
+}
+
