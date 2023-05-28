@@ -1,5 +1,5 @@
 ---
-title: "Ahmed Lab for Bioinformatics and Systems Biology"
+title: "Ahmed Lab for Genomics and Artificial Intelligence"
 author: "Firoz Ahmed, Ph.D."
 date: "`r Sys.Date()`"
 output:
