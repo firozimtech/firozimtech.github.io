@@ -222,6 +222,10 @@ __For any inquiries about collaboration opportunities please don’t hesitate to
     <a href="https://scholar.google.com/citations?user=WCCGWG0AAAAJ&hl=en/" target="_blank" rel="noopener noreferrer"><img src="images/scholar_logo.jpeg" alt="Google Scholar" width="100" height="40"></a>
  
 
-![Visitor Count](https://visitor-count-badge.herokuapp.com/total.svg?repo_id=firozimtech.firozimtech.github.io)
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=firozimtech.firozimtech.github.io)
+
+
+[![Visitors](https://shields.io/badge/dynamic/json?label=Visitors&query=value&url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2Ffirozimtech.firozimtech.github.io%2Fcount-badge&style=for-the-badge)](https://github.com/firozimtech/firozimtech.github.io)
+
 
 </footer>
