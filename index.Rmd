@@ -1,7 +1,7 @@
 ---
 title: "Ahmed Lab for Genomics and Artificial Intelligence"
 author: "Firoz Ahmed, Ph.D."
-date: "2023-07-15"
+date: "`r Sys.Date()`"
 output:
   html_document:
     css: styles.css
@@ -85,47 +85,35 @@ As an experienced educator, I am committed to providing my students with a compr
 <div style="padding-left: 30px;">
 <p style="text-align: justify;">
 
-1: F. Ahmed. [Deciphering the gene regulatory network associated with anti-apoptosis in the pancreatic islets of type 2 diabetes mice using computational approaches](http://dx.doi.org/10.3934/bioeng.2023009). <i>AIMS Bioengineering</i> 2023.
+```{r, echo=FALSE, comment="", results='asis'}
+# Read the bibliography file
+bib_data <- bibtex::read.bib("publications.bib")
 
-2: E. Ahmad. [Molecular approaches in cancer](https://www.ncbi.nlm.nih.gov/pubmed/36244434). <i>Clin Chim Acta</i> 2022.
+# Sort the publications by year in decreasing order
+sorted_bib <- bib_data[order(-as.numeric(bib_data$year)), ]
 
-3: F. Ahmed. [A Systems Biology and LASSO-Based Approach to Decipher the Transcriptome–Interactome Signature for Predicting Non-Small Cell Lung Cancer](https://www.mdpi.com/2079-7737/11/12/1752). <i>Biology</i> 2022.
+# Display the first author, title, and other details
+for (i in 1:length(sorted_bib)) {
 
-4: N. A. Baeshen. [In silico screening of some compounds derived from the desert medicinal plant Rhazya stricta for the potential treatment of COVID-19](https://www.ncbi.nlm.nih.gov/pubmed/35778482). <i>Sci Rep</i> 2022.
+  # Display the first author
+  
+  # Extract the authors' names
+  
+  authors <- sorted_bib[[i]]$author[1]
 
-5: M. R. Mohammed. [The Histone H3K27me3 Demethylases KDM6A/B Resist Anoikis and Transcriptionally Regulate Stemness-Related Genes](https://www.frontiersin.org/article/10.3389/fcell.2022.780176). <i>Frontiers in Cell and Developmental Biology</i> 2022.
+  # Display the title with URL
+  titles <- paste0("[", sorted_bib[[i]]$title, "](", sorted_bib[[i]]$url, ")")
 
-6: M. Rehan. [A Computational Approach Identified Andrographolide as a Potential Drug for Suppressing COVID-19-Induced Cytokine Storm](https://www.ncbi.nlm.nih.gov/pubmed/34248936). <i>Front Immunol</i> 2021.
+  # Apply italics to the journal name
+  journal <- paste0("<i>", sorted_bib[[i]]$journal, "</i>")
 
-7: F Ahmed. [pssRNAit: A Web Server for Designing Effective and Specific Plant siRNAs with Genome-Wide Off-Target Assessment](https://doi.org/10.1104/pp.20.00293). <i>Plant Physiology</i> 2020.
+  # Format the citation
+  citation <- paste0("", i, ": ", authors, ". ", titles, ". ", journal, " ", sorted_bib[[i]]$year, ".\n\n")
 
-8: F. Ahmed. [A Network-Based Analysis Reveals the Mechanism Underlying Vitamin D in Suppressing Cytokine Storm and Virus in SARS-CoV-2 Infection](https://www.frontiersin.org/article/10.3389/fimmu.2020.590459). <i>Frontiers in Immunology</i> 2020.
-
-9: F. Ahmed. [A Comprehensive Analysis of cis-Acting RNA Elements in the SARS-CoV-2 Genome by a Bioinformatics Approach](https://www.frontiersin.org/article/10.3389/fgene.2020.572702). <i>Frontiers in Genetics</i> 2020.
-
-10: F. A. Alzahrani. [Investigating the pathogenic SNPs in BLM helicase and their biological consequences by computational approach](https://www.ncbi.nlm.nih.gov/pubmed/32704157). <i>Sci Rep</i> 2020.
-
-11: F. Ahmed. [Integrated Network Analysis Reveals FOXM1 and MYBL2 as Key Regulators of Cell Proliferation in Non-small Cell Lung Cancer](https://www.ncbi.nlm.nih.gov/pubmed/31681566). <i>Front Oncol</i> 2019.
-
-12: H. Choudhry. [Middle East respiratory syndrome: pathogenesis and therapeutic developments](https://www.ncbi.nlm.nih.gov/pubmed/32201499). <i>Future Virol</i> 2019.
-
-13: F. Ahmed. [Bioinformatics tools for achieving better gene silencing in plants](https://www.ncbi.nlm.nih.gov/pubmed/25740355). <i>Methods Mol Biol</i> 2015.
-
-14: F. Ahmed. [A molecular bridge: connecting type 2 diabetes and Alzheimer's disease](https://www.ncbi.nlm.nih.gov/pubmed/24059325). <i>CNS Neurol Disord Drug Targets</i> 2014.
-
-15: F. Ahmed. [Comprehensive analysis of small RNA-seq data reveals that combination of miRNA with its isomiRs increase the accuracy of target prediction in Arabidopsis thaliana](https://www.ncbi.nlm.nih.gov/pubmed/25629686). <i>RNA Biol</i> 2014.
-
-16: F. Ahmed. [PHDcleav: a SVM based method for predicting human Dicer cleavage sites using sequence and secondary structure of miRNA precursors](https://www.ncbi.nlm.nih.gov/pubmed/24267009). <i>BMC Bioinformatics</i> 2013.
-
-17: F. Ahmed. [Mining Functional Elements in Messenger RNAs: Overview, Challenges, and Perspectives](https://www.ncbi.nlm.nih.gov/pubmed/22639614). <i>Front Plant Sci</i> 2011.
-
-18: F. Ahmed. [Designing of highly effective complementary and mismatch siRNAs for silencing a gene](https://www.ncbi.nlm.nih.gov/pubmed/21853133). <i>PLoS One</i> 2011.
-
-19: A. Tyagi. [HIVsirDB: a database of HIV inhibiting siRNAs](https://www.ncbi.nlm.nih.gov/pubmed/22022467). <i>PLoS One</i> 2011.
-
-20: F. Ahmed. [Prediction of guide strand of microRNAs from its sequence and secondary structure](https://www.ncbi.nlm.nih.gov/pubmed/19358699). <i>BMC Bioinformatics</i> 2009.
-
-21: F. Ahmed. [Prediction of polyadenylation signals in human DNA sequences using nucleotide frequencies](https://www.ncbi.nlm.nih.gov/pubmed/19795571). <i>In Silico Biol</i> 2009.
+  # Print the formatted citation
+  cat(citation)
+}
+```
 </p>
 </div>
 
