@@ -234,6 +234,6 @@ __For any inquiries about collaboration opportunities please don’t hesitate to
     <a href="https://scholar.google.com/citations?user=WCCGWG0AAAAJ&hl=en/" target="_blank" rel="noopener noreferrer"><img src="images/scholar_logo.jpeg" alt="Google Scholar" width="100" height="40"></a>
  
 
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=firozimtech.firozimtech.github.io)](https://github.com/firozimtech/firozimtech.github.io)
+![Visitor Count](https://visitor-count-badge.herokuapp.com/total.svg?repo_id=firozimtech.firozimtech.github.io)
 
 </footer>
